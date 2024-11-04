@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIDA OTSAV</title>
+    <link rel="stylesheet" href="./fid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="shortcut icon" href="./fid_logo-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <img src="./fid_logo-removebg-preview.png" class="logo">
+        <nav>
+            <ul id="menuList">
+                <li><a href="./gallery.html">Images</a></li>
+                <li><a href="./video.html">Videos</a></li>
+                <li><a href="./results.html">Results</a></li>
+                <li><a href="./contact.html">About & Contact</a></li>
+            </ul>
+        </nav>
+        <img src="./menu.png" class="menu-icon" onclick="togglemenu()">
+    </div>
+
+<div class="row">
+    <div class="col-1">
+        <h3>Welcome to</h3>
+        <h2>FIDO'TSAV<sub>2k24</sub></h2>
+        <h4>Empowering Skills</h4>
+        <button type="button" id="myButton">Explore <img src="./arrow.png" alt=""></button>
+    </div><div class="color-box">
+    <div class="col-2"></div>
+    <img src="./FIDA_OTSAV_TEXT-removebg-preview.png" class="loglogo">
+    <img src="./FIDA_OTSAV_TEXT-removebg-previewsider.png" class="loglogo2">
+</div>
+
+</div>
+<div class="social-links">
+    <a href="https://www.instagram.com/fid_aunion/"><img src="./ig.png"></a>
+    <a href=""><img src="./fb.png" ></a>
+    <a href="http://www.youtube.com/@FIDAUnion-dy3bc"><img src="./yt-removebg-preview.png"></a>
+</div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<div id="popup">
+   <a href="./gallery.html"><button id="closeButton">Images</button></a>
+   <a href="./video.html"><button id="closeButton">videos</button></a>
+   <a href="./results.html"><button id="closeButton">Results</button></a>
+   <a href="./pop.html"><button id="closeButton">Team score</button></a>
+   <a href="./contact.html"><button id="closeButton">About & Contact</button></a>
+    
+</div>
+
+    <script>
+var menuList = document.getElementById("menuList");
+
+menuList.style.maxHeight = "0px";
+
+function togglemenu(){
+
+    if(menuList.style.maxHeight == "0px")
+{
+       menuList.style.maxHeight = "130px";
+}
+else
+{
+    menuList.style.maxHeight = "0px";
+}
+
+}
+const myButton = document.getElementById('myButton');
+    const overlay = document.getElementById('overlay');
+    const popup = document.getElementById('popup');
+    const closeButton = document.getElementById('closeButton');
+
+    // Show the popup and overlay when the button is clicked
+    myButton.addEventListener('click', () => {
+        overlay.style.display = 'block';
+        popup.style.display = 'block';
+    });
+
+    // Close the popup and overlay when the close button is clicked
+    closeButton.addEventListener('click', () => {
+        overlay.style.display = 'none';
+        popup.style.display = 'none';
+    });
+
+    // Close the popup if the overlay is clicked
+    overlay.addEventListener('click', () => {
+        overlay.style.display = 'none';
+        popup.style.display = 'none';
+    }); 
+    </script>
+</body>
+</html>

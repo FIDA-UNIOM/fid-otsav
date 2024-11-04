@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leading....</title>
+    <link rel="shortcut icon" href="./fid_logo-removebg-preview.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        
+        .container {
+            text-align: left;
+        }
+        .team {
+            margin: 20px;
+            padding: 20px;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            background: linear-gradient(rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #winnerPopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            background: linear-gradient(rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            animation: pop 0.5s infinite alternate;
+        }
+        @keyframes pop {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 50;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Team Leaderboard</h1>
+    <div class="team">
+        <h2><img src="Qalqilya-10-31-2024.png" style="width: 200px;"></h2>
+        <p>Arts Score: <span id="scoreA">116</span></p>
+        <p>Sports Score: <span id="scoreA">51</span></span></p>
+    </div>
+    <div class="team">
+        <h2><img src="Jabaliya-10-31-2024.png" style="width: 200px;"></h2>
+        <p>Arts Score: <span id="scoreB">106</span></p>
+        <p>Sports Score: <span id="scoreA">50</span></p>
+    </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<div id="winnerPopup">
+    <h1 style="text-align: center;">Qalqilya</h1>
+    <h2 style="text-align: center;">Leading!</h2><br>
+    <p id="winnerText"></p>
+</div>
+
+<script>
+    // Function to determine the winner
+    function showWinner() {
+        const scoreA = parseInt(document.getElementById('scoreA').innerText);
+        const scoreB = parseInt(document.getElementById('scoreB').innerText);
+        const overlay = document.getElementById('overlay');
+        const winnerPopup = document.getElementById('winnerPopup');
+        const winnerText = document.getElementById('winnerText');
+
+        // Show overlay and popup
+        overlay.style.display = 'block';
+        winnerPopup.style.display = 'block';
+
+        // Hide the popup and overlay after 10 seconds
+        setTimeout(() => {
+            winnerPopup.style.display = 'none';
+            overlay.style.display = 'none';
+        }, 10000); // 10000 milliseconds = 10 seconds
+    }
+
+    // Trigger the popup when the page loads
+    window.onload = function() {
+        setTimeout(showWinner, 1000); // Delay before showing the winner
+    };
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+
+<canvas id="myChart" style="width:100%;max-width:800px"></canvas>
+
+<script>
+var xValues = ["Qalqilya Arts", "Jabaliya Arts", "Qalqilya Sports", "Jabaliya Sports"];
+var yValues = [116,106,51,50];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "FIDO'TSAV 2k24 Arts"
+    }
+  }
+});
+
+</script>
+
+</body>
+</html>

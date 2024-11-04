@@ -1,0 +1,267 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+.menu-icon{
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    transition: 0.6s ease;
+}
+
+nav ul li a:hover{
+    color: rgb(0, 89, 255);
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.col-1{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+.col-1 h2{
+    font-size: 54px;
+}
+.col-1 h3{
+    font-size: 30px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+.col-1 sub{
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 100;
+}
+
+ .col-1 sub{
+    margin: 30px;
+    font-size: 20px;
+ }
+
+ button{
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: width 0.5s;
+    margin-top: 20px;
+}
+
+button img{
+    width: 30px;
+    display: none;
+}
+
+button:hover img{
+    display: block;
+}
+
+button:hover{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-1::after{
+    content: '';
+    width: 10px;
+    height: 70%;
+    position: absolute;
+    left: -40px;
+    top: 8px;
+    background: linear-gradient( rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.col-2{
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+
+}
+
+.col-2 .loglogo{
+    width: 90%;
+}
+.loglogo{
+    width: 80%;
+float: right;
+display: inline-flex;
+margin-top: 130px;
+margin-right: 8%;
+}
+
+.color-box{
+    position: absolute;
+    right: 0;
+    top: 145px;
+    background:  linear-gradient(rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border-radius:20px 0 0 20px ;
+    height: 55%;
+    width: 30%;
+    z-index: -1;
+}
+.loglogo2{
+    display: none;
+}
+
+.social-links img{
+    height: 13px;
+    margin: 20px;
+    cursor: pointer;
+
+}
+.social-links{
+    text-align: center;
+}
+
+@media only screen and (max-width:700px){
+
+nav ul{
+width: 100%;
+background:  black;
+position: absolute;
+top: 75px;
+right: 0;
+z-index: 2;
+}
+nav ul li{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+nav ul li a{
+    color: #fff;
+}
+
+.menu-icon{
+    display: block;
+}
+#menuList{
+    overflow: hidden;
+    transition: 0.5s;
+}
+.row{
+    flex-direction: column-reverse;
+    margin: 50px 0;
+}
+
+.col-2{
+    flex-basis: 100%;
+    margin-bottom: 50px;
+}
+.col-2 .loglogo{
+    width:77% ;
+}
+.color-box{
+    width: 13%;
+}
+.col-1{
+    flex-basis: 100%;
+}
+.col-1 h2{
+    font-size: 35px;
+}
+.col-1 h3{
+    font-size: 15px;
+}
+.loglogo{
+    display: none;
+}
+.loglogo2{
+    display: flex;
+    width: 100%;
+    margin-top: -10px;
+    height: 30%;
+    float: right;
+    height: 70%;
+
+}
+
+}
+
+#closeButton{
+    background: black;
+    color: white;
+}
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    width: 140px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+}
+

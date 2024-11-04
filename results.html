@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIDA OTSAV</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="./Contact-Form-HTML-CSS-master/team.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="shortcut icon" href="./fid_logo-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <img src="./fid_logo-removebg-preview.png" class="logo">
+        <nav>
+            <ul id="menuList">
+                <li><a href="./gallery.html">Images</a></li>
+                <li><a href="./video.html">Videos</a></li>
+                <li><a href="./contact.html">About & Contact</a></li>
+            </ul>
+        </nav>
+        <img src="./menu.png" class="menu-icon" onclick="togglemenu()">
+    </div>
+
+
+        <h1>Results</h1>
+        <div class="tabs">
+            <div class="tab active" onclick="openTab('sports')" id="tab-button">Ranking</div>
+            <div class="tab" onclick="openTab('arts')" id="tab-button">Programs</div>
+            <a href="./pop.html"><button id="tab-button">Team score</button></a>
+        </div>
+
+        <div id="arts" class="tab-content">
+            <h2>Programs and Results</h2>
+            <div class="popdiv"><button onclick="openPopup()" class="btn-pop">Veiw programs and results</button></div>
+
+<!-- Popup structure -->
+<div class="overlay" id="overlay" onclick="closePopup()"></div>
+<div class="popup" id="popup">
+  <button class="close-btn" onclick="closePopup()">X</button>
+  <h2>Explore</h2>
+  <a href="./programs.html"><button class="btn-pop2">Sports</button></a><a href="./arts.html"><button class="btn-pop2">Arts</button></a>
+</div>
+
+        </div>
+
+        <div id="sports" class="tab-content active">
+            <h2>Ranking</h2>
+            <main class="table" id="customers_table">
+                <section class="table__header">
+                    <h1>FIDO'TSAV</h1>
+                    <div class="input-group">
+                        <input type="search" placeholder="Search Data...">
+                        <img src="search.png" alt="">
+                    </div>
+                    <div class="export__file">
+                        <label for="export-file" class="export__file-btn" title="Export File"><img src="./export.png" width="30px" height="30px"></label>
+                        <input type="checkbox" id="export-file">
+                        <div class="export__file-options">
+                            <label>Export As &nbsp; &#10140;</label>
+                            <label for="export-file" id="toPDF">PDF <img src="pdf.png" alt=""></label>
+                            <label for="export-file" id="toJSON">JSON <img src="json.png" alt=""></label>
+                            <label for="export-file" id="toCSV">CSV <img src="csv.png" alt=""></label>
+                            <label for="export-file" id="toEXCEL">EXCEL <img src="excel.png" alt=""></label>
+                        </div>
+                    </div>
+                </section>
+                <section class="table__body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Chest NO<span class="icon-arrow">&UpArrow;</span></th>
+                                <th> Members <span class="icon-arrow">&UpArrow;</span></th>
+                                <th> Team <span class="icon-arrow">&UpArrow;</span></th>
+                                <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                                <th>  Points<span class="icon-arrow">&UpArrow;</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>118</td>
+                                <td> <img src="saf.png" alt="">Muhammed Safwan.S</td>
+                                <td>Jabaliya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified Team Leader</p>
+                                </td>
+                                <td> <strong> Calculating.... </strong></td>
+                            </tr>
+                            <tr>
+                                <td>111</td>
+                                <td><img src="jaz.png" alt="">Jazib Muhammed</td>
+                                <td>Jabaliya </td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified Assitand Leader</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td>113</td>
+                                <td><img src="nih.png" alt="">Muhammed Nihal.O.N</td>
+                                <td>Jabaliya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td>106</td>
+                                <td><img src="mf.png" alt="">Hadhi.M.F</td>
+                                <td>Jabaliya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td> 105</td>
+                                <td><img src="niz.png" alt="">Nizamudheen.C.K</td>
+                                <td>Jabaliya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td>114</td>
+                                <td><img src="a.png" alt="">Razi.A</td>
+                                <td>Jabaliya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td>109</td>
+                                <td><img src="yn.png" alt="">Yasir.N</td>
+                                <td>Jabaliya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td>117</td>
+                                <td><img src="muna.png" alt="">Ali Munavvir.P.A</td>
+                                <td>Jabaliya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td>107</td>
+                                <td><img src="ek.png" alt="">Shameem.E.K</td>
+                                <td>Jabaliya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td> 108</td>
+                                <td><img src="ymk.png" alt="">Yasir.M.K</td>
+                                <td>Jabaliya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td> 103 </td>
+                                <td> <img src="ibi.png" alt="">Shahafas ibi</td>
+                                <td>Qalqilya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified Team Leader</p>
+                                </td>
+                                <td> <strong>Calculating.... </strong></td>
+                            </tr>
+                            <tr>
+                                <td>104</td>
+                                <td><img src="jazee.png" alt="">Jazeel</td>
+                                <td>Qalqilya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified Assitand Leader</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td>116</td>
+                                <td><img src="k.png" alt="">Muhammed Riyan.K</td>
+                                <td>Qalqilya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td>119</td>
+                                <td><img src="#" alt="">Irfan.K.J</td>
+                                <td>Qalqilya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td>101</td>
+                                <td><img src="swala.png" alt="">Swalahudheen.P.S</td>
+                                <td>Qalqilya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td>102</td>
+                                <td><img src="bas.png" alt="">Abdul Basith.M.M</td>
+                                <td>Qalqilya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td> 120</td>
+                                <td><img src="hab.png" alt="">HabeebuRahman.E</td>
+                                <td>Qalqilya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td> 110</td>
+                                <td><img src="sodapdf-converted.png" alt="">Anshif.M</td>
+                                <td>Qalqilya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td> 115</td>
+                                <td><img src="pt.png" alt="">Razin.P.T</td>
+                                <td>Qalqilya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <tr>
+                                <td> 112</td>
+                                <td><img src="risham.png" alt="">Risham.M.K</td>
+                                <td>Qalqilya</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified</p>
+                                </td>
+                                <td> <strong>Calculating....</strong> </td>
+                            </tr>
+                            <td>controller</td>
+                                <td><img src="had.png" alt="">Hadhi Ameen.P</td>
+                                <td>Fest Controller</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified Controler</p>
+                                </td>
+                                <td> <strong>Controll</strong> </td>
+                            </tr>
+                            <td>controller</td>
+                                <td><img src="ajsal.png" alt="">Ajsal.C.M</td>
+                                <td>Fest Controller</td>
+                                <td>
+                                    <p class="status delivered"><img src="verify-removebg-preview.png" class="veri">Verified Controler</p>
+                                </td>
+                                <td> <strong>Controll</strong> </td>
+                            </tr>
+                            
+                            
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+            <script src="script.js"></script>
+            <script src="script2.js"></script>
+
+
+
+    <script>
+        var menuList = document.getElementById("menuList");
+        
+        menuList.style.maxHeight = "0px";
+        
+        function togglemenu(){
+        
+            if(menuList.style.maxHeight == "0px")
+        {
+               menuList.style.maxHeight = "130px";
+        }
+        else
+        {
+            menuList.style.maxHeight = "0px";
+        }
+        
+        }
+
+
+        function openPopup() {
+    document.getElementById("popup").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+  }
+
+  // Function to close the popup
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+  }
+        
+                
+            </script>
+    </body>
+</html>
